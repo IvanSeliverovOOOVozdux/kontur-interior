@@ -131,7 +131,8 @@
   .tab:hover{color:var(--ink);border-color:var(--ink)}
   .tab.active{background:var(--ink);border-color:var(--ink);color:var(--bg)}
   .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(14px,1.6vw,22px)}
-  .pcard{grid-column:span 2;cursor:pointer;display:block;border:none;background:none;padding:0;text-align:left;font-family:inherit}
+  .pcard{grid-column:span 2;cursor:default;display:block;border:none;background:none;padding:0;text-align:left;font-family:inherit}
+  .pcard .frame,.pcard .meta{cursor:pointer}
   .pcard.tall{grid-row:span 2}
   .pcard.wide{grid-column:span 3}
   .pcard.feat{grid-column:span 4;grid-row:span 2}
