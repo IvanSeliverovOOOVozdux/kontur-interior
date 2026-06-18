@@ -141,15 +141,15 @@
   .pcard img{width:100%;height:100%;object-fit:cover;position:relative;z-index:0;
     transition:transform 1.1s var(--ease),filter .6s;
     filter:url(#crisp) saturate(.86) contrast(1.07) sepia(.10) brightness(.99)}
-  .pcard:hover img{transform:scale(1.06);filter:url(#crisp) saturate(.98) contrast(1.08) sepia(.05) brightness(1.01)}
+  .pcard .frame:hover img{transform:scale(1.06);filter:url(#crisp) saturate(.98) contrast(1.08) sepia(.05) brightness(1.01)}
   /* unifying warm wash — makes mixed photos read as one editorial set */
   .pcard .frame::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
     background:linear-gradient(155deg,rgba(162,90,56,.13),rgba(27,25,21,.07));mix-blend-mode:soft-light}
   .pcard .frame::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(20,18,15,.5),transparent 46%);opacity:0;transition:opacity .5s}
-  .pcard:hover .frame::after{opacity:1}
+  .pcard .frame:hover::after{opacity:1}
   .pcard .view{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;background:var(--paper);
     display:grid;place-items:center;opacity:0;transform:translateY(-6px);transition:.4s var(--ease);z-index:2}
-  .pcard:hover .view{opacity:1;transform:none}
+  .pcard .frame:hover .view{opacity:1;transform:none}
   .pcard .view svg{width:16px;height:16px;stroke:var(--ink);stroke-width:1.8}
   .pcard .meta{padding:14px 2px 4px;display:flex;justify-content:space-between;align-items:baseline;gap:14px}
   .pcard .meta .nm{font-family:'Fraunces',serif;font-size:19px;font-weight:600}
